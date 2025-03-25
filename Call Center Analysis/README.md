@@ -1,4 +1,4 @@
-<H1> Call Center Analysis |Power BI Virtual Case Experience
+<H1> </a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" alt="Microsoft Power BI" width="30" height="30"> Call Center Analysis 
 
 # Table of contents
 - [Problem Statement](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#problem-statement)
