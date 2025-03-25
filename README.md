@@ -10,6 +10,7 @@ This repository displays the process and outcomes of the tasks completed by me d
 
 This virtual experience program consists of 3 tasks:                    
 - [**Project 1**](): Create Call Centre Dashboard - visualizing customer and agent behavior.
+  ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
 - [**Project 2**](): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.
 - [**Project 3**](): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.
 <br>
