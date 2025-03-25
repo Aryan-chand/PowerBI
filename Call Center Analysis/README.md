@@ -1,73 +1,119 @@
-# **Table of Contents:**
+# Table of contents
+- [Problem Statement](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#problem-statement)
+- [Data Source](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-sourcing)
+- [Data Preparation](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-preparation)
+- [Data Visualization](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-visualization)
+- [Analysis and Insights](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#analysis-and-insights)
+- [Shareable Link](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#Shareable-Link)
 
 
-## Task - Call Centre Trends Analysis
-Visualizing customer and agent behavior Create a dashboard in Power BI for Call Centre Manager that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset.<br><br>
+# Problem Statement
 
-**:red_circle:<b> Problem Statement : </b>**
+- **Problem:** The manager at PhoneNow (a big telecom company) is seeking transparency and insight into the Call Center dataset to gain an accurate overview of long-term customer and agent behavior trends.
+- **Objective:** The purpose of this analysis is to create a dashboard in Power BI for Call Center Manager that reflects all relevant Key Performance Indicators (KPIs) and metrics to:
+    - Self-exploratory call trends
+    - Overview of the agent’s performance and behaviors
+    - Overview the customer satisfaction
+    - Contain many metrics and plots related to a single area of business for discussing with higher managers and generating further analysis.
+    - Allows for minimal interaction
+- **Possible KPIs** include (but are not limited to):
+    - Overall customer satisfaction
+    - Overall calls answered/abandoned
+    - Calls by time
+    - Average speed of answer
+    - Agents performance quadrant -> average handle time(talk duration) vs calls answered
+# Data Sourcing
 
-The purpose of this analysis is to create a dashboard in PowerBI for call canter manager that reflects all relevant Key Performance Indicators (KPIs) and metrics in the dataset.<br><br>
+The Dataset used for this analysis was provided by :link:[Pwc Switzerland](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/01%20Call-Center-Dataset.xlsx)
 
-**:red_circle: <b>The KPI which are included in this dashboard are </b> :**
+# Data Preparation
 
-• Overall customer satisfaction
+The tabulation below shows the `Call Center` table with its fields names and their description:
 
-• Overall calls answered/abandoned
+| Field Name | Description | Data Type |
+| --- | --- | --- |
+| Call Id | Represents every unique observation in the dataset | Text  |
+| Agent | Describes the name of the agent | Text |
+| Date | Describes the date of the call | Date |
+| Time | Represents the time of the call | Date/Time |
+| Topic | Describes the topic of the caller | Text |
+| Answered (Y/N) | Describes if the call was answered or not | Text |
+| Resolved | Describes if the problem was Resolved or not | Text |
+| Speed of answer in seconds | Represents the speed of answer in seconds | Decimal number |
+| AvgTalkDuration | Represents the average talk duration of a call | Time |
+| Satisfaction rating | Represents the satisfaction rating of the agent during the call | Decimal number |
 
-• Calls by time
+### Data Cleaning
 
-• Average speed of answer
+Data Cleaning for the dataset was done in Power Query as follows:
 
-• Agents performance quadrant i.e. average handle time(talk duration) vs calls answered <br><br>
+- Unnecessary columns were removed
+- Each of the columns in the table was validated to have the correct data type
+- Unnecessary rows were removed
 
-**:red_circle:<b> Flow of work : </b>**
+# Data Visualization
+### Key Performance Indicators and Metrics:
 
-**Step :one:- Upload Data**
+**About Calls and Agents:** 
 
-The Dataset used for this analysis was presented by PWC_Switzerland... :link:[ Link ](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/01%20Call-Center-Dataset.xlsx)
+- Overall calls answered/abandoned
+- Calls received by time, day 
+- Average speed of answer, handle duration
+- Resolved rate by Agents, Topics
+- Agent’s performance quadrant -> average handle time (talk duration) vs calls answered
 
-**Step :two:-Cleaning data**
+**About Customer satisfaction:**
 
-Data transformation was done in Power Query, and the dataset was loaded into Microsoft Power BI Desktop for modelling. The call canter dataset is given by a table named Call Center which has 10 columns and 5000 rows of observation
+- Overall customer satisfaction
+- Customer satisfaction distribution by Agents, Topics
+### Measures
 
-The tabulation below shows the Call center table with its column names and their description:
+The measure used in visualization are:
 
-| Column Name | Description |
-|--- | --- |
-| Call Id | Represents every unique observation in the dataset |
-| Agent | Describes the name of the agent |
-| Date | Describes the date of the call |
-| Time | Represents the time of the call |
-| Topic | Describes the topic of the caller |
-| Answered | (Y/N) Describes if the call was Answered or not |
-| Resolved | Describes if the problem was Resolved or not |
-| Speed of answer(in seconds) |	Represents the speed of answer in seconds|
-| AvgTalkDuration	| Represents the average talk duration of call |
-| Satisfaction rating |	Represents the satisfaction rating of the agent during the call |<br>
+- **Calculated measures:**
 
-**Step :three:-Transform data**
+  - Number of answered = `Calculate(distinctcount('Call Center'[Call Id]),Filter('Call Center','Call Center'[Answered (Y/N)]="Y"))`
+  - Abandoned Rate = `DIVIDE(COUNT('Call Center'[Call Id]) - [Number of Answer], COUNT('Call Center'[Call Id]))`
+  - Number of resolved = `Calculate(distinctcount('Call Center'[Call Id]),Filter('Call Center','Call Center'[Resolved]="Y"))`
+  - Average satisfaction rating = `Average('Call Center'[Satisfaction rating])`
+  - Average Speed of answer = `Average('Call Center'[Average Speed of answer in seconds])`
+  - Operation hour DAX = `FORMAT('Call Center'[Time], "hh:mm")`
+  - duration = `MINUTE('Call Center'[AvgTalkDuration])*60 + SECOND('Call Center'[AvgTalkDuration])`
 
-Data Cleaning and transformation for the dataset were done in power query as follows: 
+# Analysis and Insights
+The purpose of this dashboard is to serve as self-exploratory for managers, but I still note some highlighted points that I recognize below:
 
-• Unnecessary columns were removed <br>
-• Each of the columns in the table was validated to have the correct data type <br>
-• Unnecessary rows were removed <br>
+********************About Call trends:********************
 
-**Step :four:-Data Visualization**
+- Customers tend to call more between 5:00 pm - 5:30 pm at 250 calls received with an abandoned rate is 18.40% (approximately to the average abandoned rate) and distributed mainly in the middle of the month
+- The highest abandoned rate is 28.03% between 1:00 pm - 1:30 pm
+- Customers have more problems with Streaming service
+- The resolved rate is at a high rate (89,94%)
 
-Data visualization for the datasets was done in Microsoft Power BI Desktop: 
+********************About performance of agents:********************
 
-The Call Center Manager Page Shows KPIs including overall customer satisfaction, overall calls answered/abandoned, calls by time, average speed of answer, agents performance quadrant i.e. average handle time(talk duration) vs calls answered
+- The agent who satisfies customers most is Becky with a 12.02% of “Very good” rating
+- The agent who has the highest resolved rate is Jim and he is effective with solving problems related to “Contract related” and “Admin Support”
 
-**Step :five:-Data Analysis**
+********************About customer satisfaction:********************
 
-Measures used in visualization are:
+- The average customer satisfaction is at an acceptable rate with 3.40, mainly comes from “Average” (30.04%) and “Good” (29.11%) rating
+- The correlation between call answered and call resolved is strongly positive which resulted in a increase in the customer satisfaction rate
 
-• %TotalCallsAnswered = DIVIDE([CallsAnswered],COUNT('Call Center Data'[Call Id]))
+# :link: Shareable Link 
+You can interact and have fun with the dashboard here:
 
-• CallsAnswered = CALCULATE(COUNT('Call Center Data'[Answered (Y/N)]),'Call Center Data'[Answered (Y/N)]="Y")
+[Microsoft PowerBI]( )
 
-• CallsMissed = CALCULATE(COUNT('Call Center Data'[Answered (Y/N)]),'Call Center Data'[Answered (Y/N)]="N")
 
-• IssueResolved = CALCULATE(COUNT('Call Center Data'[Resolved]),'Call Center Data'[Resolved]="Y")
+
+
+
+
+
+
+
+
+
+
 
