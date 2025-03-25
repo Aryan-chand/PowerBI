@@ -53,7 +53,7 @@ Data Cleaning for the dataset was done in Power Query as follows:
 
 # Data Visualization
 
-![dashboard github]()
+![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
 
 ### Key Performance Indicators and Metrics:
 
