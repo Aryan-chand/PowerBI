@@ -1,5 +1,5 @@
 # Table of contents
-- [Problem Statement](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#problem-statement)
+- [Problem Statement](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#problem-statement)
 - [Data Source](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-sourcing)
 - [Data Preparation](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-preparation)
 - [Data Visualization](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis/README.md#data-visualization)
