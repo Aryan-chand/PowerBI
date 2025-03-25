@@ -30,7 +30,7 @@ The Dataset used for this analysis was provided by :link:[Pwc Switzerland](https
 
 # Data Preparation
 
-The tabulation below shows the `Call Center` table with its fields names and their description:
+The tabulation below shows the `Call Center` which has 10 columns and 5000 rows of observation table with its fields names and their description:
 
 | Field Name | Description | Data Type |
 | --- | --- | --- |
