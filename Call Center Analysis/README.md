@@ -103,7 +103,7 @@ The purpose of this dashboard is to serve as self-exploratory for managers, but 
 # :link: Shareable Link 
 You can interact and have fun with the dashboard here:
 
-[Microsoft PowerBI]( )
+[Microsoft PowerBI](https://app.powerbi.com/groups/me/reports/0514f77b-067e-45ee-9811-f2803b103996/ReportSection116041c0c0bc62d09684?experience=power-bi)
 
 
 
