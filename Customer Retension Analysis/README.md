@@ -1,12 +1,12 @@
 <H1> </a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" alt="Microsoft Power BI" width="30" height="30"> Customer Retention Analysis 
 
 # Table of contents
-- [Problem Statement](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#problem-statement)
-- [Data Source](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#data-sourcing)
-- [Data Preparation](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#data-preparation)
-- [Data Visualization](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#data-visualization)
-- [Analysis and Insights](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis#analysis-and-insights)
-- [Shareable Link](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis#Shareable-Link)
+- [Problem Statement](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis#problem-statement)
+- [Data Source](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis#data-sourcing)
+- [Data Preparation](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis#data-preparation)
+- [Data Visualization](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis#data-visualization)
+- [Analysis and Insights](https://github.com/Aryan-chand/PowerBI/edit/main/Customer%20Retension%20Analysis#analysis-and-insights)
+- [Shareable Link](https://github.com/Aryan-chand/PowerBI/edit/main/Customer%20Retension%20Analysis#Shareable-Link)
 
 
 # Problem Statement
@@ -113,7 +113,7 @@ Data visualization for the datasets was done in Microsoft Power BI Desktop, the 
 - Churn Predictive Model Evaluation
 - Most important model features
 - Risk level
-- 
+  
 ### Measures
 
 The measure used in visualization are:
