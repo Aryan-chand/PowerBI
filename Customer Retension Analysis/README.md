@@ -156,24 +156,13 @@ The measure used in visualization are:
 # Analysis and Insights
 The purpose of this dashboard is to serve as self-exploratory for managers, but I still note some highlighted points that I recognize below:
 
-********************About Call trends:********************
-
-- Customers tend to call more between 5:00 pm - 5:30 pm at 250 calls received with an abandoned rate is 18.40% (approximately to the average abandoned rate) and distributed mainly in the middle of the month
-- The highest abandoned rate is 28.03% between 1:00 pm - 1:30 pm
-- Customers have more problems with Streaming service
-- The resolved rate is at a high rate (89,94%)
-
-********************About performance of agents:********************
-
-- The agent who satisfies customers most is Becky with a 12.02% of “Very good” rating
-- The agent who has the highest resolved rate is Jim and he is effective with solving problems related to “Contract related” and “Admin Support”
-
-********************About customer satisfaction:********************
-
-- The average customer satisfaction is at an acceptable rate with 3.40, mainly comes from “Average” (30.04%) and “Good” (29.11%) rating
-- The correlation between call answered and call resolved is strongly positive which resulted in a increase in the customer satisfaction rate
-
+- Month-to-Month contracts, lack of online security and tech support, and issues with Fiber Optic service are some of the reasons for customer churn.
+- Only 16% of the customers are senior citizens, with almost double the churn rate compared to younger customers.
+- The customers have varying contract lengths, with a lot of them only staying for a month and some for up to 72 months.
+- Customers taking longer contracts tend to be more loyal and stay with the company for a longer period of time.
+- Customers are more likely to churn when the monthly charges are high, and there is a higher chance of churn when the total charges are lower.
+- 
 # :link: Shareable Link 
 You can interact and have fun with the dashboard here:
 
-[Microsoft PowerBI](https://app.powerbi.com/groups/me/reports/0514f77b-067e-45ee-9811-f2803b103996/ReportSection116041c0c0bc62d09684?experience=power-bi)
+[Microsoft PowerBI]( )
