@@ -12,7 +12,12 @@ These are the screenshot of the dashboard for projects I have created to learn m
 - [**Project 1**](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis): Create Call Centre Dashboard - visualizing customer and agent behavior.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
-- [**Project 2**](): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.
+  
+- [**Project 2**](): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.<br>
+
+  ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
+  ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
+  
 - [**Project 3**](): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.
 <br>
 
