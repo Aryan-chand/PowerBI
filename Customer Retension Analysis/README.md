@@ -166,4 +166,4 @@ The purpose of this dashboard is to serve as self-exploratory for managers, but 
 # :link: Shareable Link 
 You can interact and have fun with the dashboard here:
 
-[Microsoft PowerBI(https://app.powerbi.com/groups/me/reports/67c6a7b3-7a00-4474-8d5e-64b531ab0ae1/ReportSection515eb6e3c03bdcc7c490?experience=power-bi)
+[Microsoft PowerBI](https://app.powerbi.com/groups/me/reports/67c6a7b3-7a00-4474-8d5e-64b531ab0ae1/ReportSection515eb6e3c03bdcc7c490?experience=power-bi)
