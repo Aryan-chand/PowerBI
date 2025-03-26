@@ -6,7 +6,7 @@
 - [Data Preparation](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#data-preparation)
 - [Data Visualization](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#data-visualization)
 - [Analysis and Insights](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis#analysis-and-insights)
-- [Shareable Link](https://github.com/Aryan-chand/PowerBI/edit/main/Call%20Center%20Analysis#Shareable-Link)
+- [Shareable Link](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis#link-shareable-link)
 
 
 # Problem Statement
