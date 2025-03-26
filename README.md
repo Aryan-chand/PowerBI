@@ -13,7 +13,7 @@ These are the screenshot of the dashboard for projects I have created to learn m
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
   
-- [**Project 2**](): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.<br>
+- [**Project 2**](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
