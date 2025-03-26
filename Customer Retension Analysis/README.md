@@ -88,7 +88,8 @@ A new table named `Churn unpivot` was created by duplicating the `Churn datas
 
 Data visualization for the datasets was done in Microsoft Power BI Desktop, the dashboard includes 3 main dashboards and 5 tooltip pages
 
-![dashboard github]( )
+![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
+![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
 
 ### Key Performance Indicators and Metrics:
 
