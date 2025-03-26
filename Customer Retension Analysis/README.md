@@ -11,66 +11,108 @@
 
 # Problem Statement
 
-- **Problem:** The manager at PhoneNow (a big telecom company) is seeking transparency and insight into the Call Center dataset to gain an accurate overview of long-term customer and agent behavior trends.
-- **Objective:** The purpose of this analysis is to create a dashboard in Power BI for Call Center Manager that reflects all relevant Key Performance Indicators (KPIs) and metrics to:
-    - Self-exploratory call trends
-    - Overview of the agent’s performance and behaviors
-    - Overview the customer satisfaction
+- **Problem:** Churning customers using PhoneNow services were got in touch after they terminated the contract, and the Customer Retention manager wants to understand their customer profile and insights with a focus on retaining customers as well as approaching in advance who is at risk.
+- **Objectives:** The purpose of this analysis is to create a Customer Retention Dashboard in Power BI for the Customer Retention Manager that reflects all relevant Key Performance Indicators (KPIs) and metrics to:
+    - Self-exploratory the customer demographics and insights (churning & retaining).
+    - Actively approach who is at risk with the risk level of specific customer
     - Contain many metrics and plots related to a single area of business for discussing with higher managers and generating further analysis.
-    - Allows for minimal interaction
-- **Possible KPIs** include (but are not limited to):
-    - Overall customer satisfaction
-    - Overall calls answered/abandoned
-    - Calls by time
-    - Average speed of answer
-    - Agents performance quadrant -> average handle time(talk duration) vs calls answered
+    - Allows for minimal interaction.
+    - Based on finding recommend improving customer retention.
 # Data Sourcing
 
-The Dataset used for this analysis was provided by :link:[Pwc Switzerland](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/01%20Call-Center-Dataset.xlsx)
+The Dataset used for this analysis was provided by :link:[Pwc Switzerland]( )
 
 # Data Preparation
 
-The tabulation below shows the `Call Center` which has 10 columns and 5000 rows of observation table with its fields names and their description:
+The dataset was loaded into Microsoft Power BI Desktop for modeling after transformation in Power Query.
+
+The tabulation below shows the metadata of `Churn` dataset:
+
+| File name | 02 Churn-Dataset  |
+| --- | --- |
+| Format | .xlsx |
+| Size | 772KB |
+| Fields | 23 |
+| Entities | 7043 |
+
+The tabulation below shows the `Churn` table with its field's names and their description:
 
 | Field Name | Description | Data Type |
 | --- | --- | --- |
-| Call Id | Represents every unique observation in the dataset | Text  |
-| Agent | Describes the name of the agent | Text |
-| Date | Describes the date of the call | Date |
-| Time | Represents the time of the call | Date/Time |
-| Topic | Describes the topic of the caller | Text |
-| Answered (Y/N) | Describes if the call was answered or not | Text |
-| Resolved | Describes if the problem was Resolved or not | Text |
-| Speed of answer in seconds | Represents the speed of answer in seconds | Decimal number |
-| AvgTalkDuration | Represents the average talk duration of a call | Time |
-| Satisfaction rating | Represents the satisfaction rating of the agent during the call | Decimal number |
+| customerID | Represents the unique number of the customer in the dataset | Text  |
+| gender | Describes the gender of the customer | Text |
+| SeniorCitizen | Describes if the customer is a senior citizen | Text |
+| Partner | Describes if the customer has a partner | Text |
+| Dependents | Describes if the customer has a dependent | Text |
+| tenure | Describes how long as a customer | Whole number |
+| PhoneService | Describes if the customer has registered a phone service | Text |
+| MultipleLines | Describes if the customer has registered multiple lines | Text |
+| InternetService | Describes if the customer has registered for Internet service | Text |
+| OnlineSecurity | Describes if the customer has registered for online security | Text |
+| OnlineBackup | Describes if the customer has registered for online backup | Text |
+| DeviceProtection | Describes if the customer has registered for device protection | Text |
+| TechSupport | Describes if the customer has registered for tech support | Text |
+| StreamingTV | Describes if the customer has registered to stream tv | Text |
+| StreamingMovies | Describes if the customer has registered to stream movies | Text |
+| Contract | Describes the length of the contract of the customer | Text |
+| PaperlessBilling | Describes if the customer has registered for paperless billing | Text |
+| PaymentMethod | Describes the payment method of the customer | Text |
+| MonthlyCharges | Represents the monthly charge incurred by the customer | Decimal number |
+| TotalCharges | Represents the total charge incurred by the customer | Decimal number |
+| numAdminTickets | Represents the number of admin tickets opened by the customer | Whole number |
+| numTechTickets | Represents the number of tech tickets opened by the customer | Whole number |
+| Churn | Describes if the customer is at risk of churn | Text |
+- **Relevant information about the** `Churn` **dataset:**
+    - Customers who left within the last month
+    - Services each customer has signed up for phone, multiple lines, internet, online security, online backup, device protection, tech support, and streaming TV and movies
+    - Customer account information: how long as a customer, contract, payment method, paperless billing, monthly charges, total charges and number of tickets opened in the categories administrative and technical
+    - Demographic info about customers – gender, age range, and if they have partners and dependents
 
 ### Data Cleaning
 
 Data Cleaning for the dataset was done in Power Query as follows:
 
-- Unnecessary columns were removed
 - Each of the columns in the table was validated to have the correct data type
-- Unnecessary rows were removed
+- There are 11 `N/A` values in `TotalCharges` column. Those missing values were filled with the `MonthlyCharges` value of each row because those customers are new and their tenure is just 1. `Table.AddColumn(#"Changed Type", "Custom", each if [TotalCharges] = null then [MonthlyCharges] else [TotalCharges])`
+
+### Data Transformation
+
+A new table named `Churn unpivot` was created by duplicating the `Churn dataset` table and unpivoting some columns to support a clear overview look. In the new table, I conducted transformation using M-formula, you can refer at below:
+
+- Attribute of demographic info: `Table.Unpivot(#"Replaced Value1", {"SeniorCitizen", "Partner", "Dependents"}, "Attribute", "Value")`
+- Attribute of services:
+    - `Table.ReplaceValue(#"Renamed Columns","No internet service","No",Replacer.ReplaceText,{"OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV", "StreamingMovies"})`
+    - `Table.Unpivot(#"Reordered Columns", {"PhoneService", "MultipleLines", "Internet", "OnlineSecurity", "OnlineBackup", "DeviceProtection", "TechSupport", "StreamingTV", "StreamingMovies"}, "Attribute", "Value.1")`
 
 # Data Visualization
 
-![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
+Data visualization for the datasets was done in Microsoft Power BI Desktop, the dashboard includes 3 main dashboards and 5 tooltip pages
+
+![dashboard github]( )
 
 ### Key Performance Indicators and Metrics:
 
-**About Calls and Agents:** 
+**About Customer Profile:**
 
-- Overall calls answered/abandoned
-- Calls received by time, day 
-- Average speed of answer, handle duration
-- Resolved rate by Agents, Topics
-- Agent’s performance quadrant -> average handle time (talk duration) vs calls answered
+- Number of retained and churned customers
+- Retention & Churn Rate
+- Total Admin & Tech ticket
+- Total and monthly charge
+- Demographic, Account and Service info
 
-**About Customer satisfaction:**
+**About EDA Churn Profile:**
 
-- Overall customer satisfaction
-- Customer satisfaction distribution by Agents, Topics
+- Churn by each service
+- Churn by tenure
+- Churn by Contract type
+- Total Admin & Tech tickets of churn customers
+
+**About Churn Predictive Model Comparison:**
+
+- Churn Predictive Model Evaluation
+- Most important model features
+- Risk level
+- 
 ### Measures
 
 The measure used in visualization are:
