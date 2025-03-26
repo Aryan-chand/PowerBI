@@ -117,15 +117,41 @@ Data visualization for the datasets was done in Microsoft Power BI Desktop, the 
 
 The measure used in visualization are:
 
-- **Calculated measures:**
-
-  - Number of answered = `Calculate(distinctcount('Call Center'[Call Id]),Filter('Call Center','Call Center'[Answered (Y/N)]="Y"))`
-  - Abandoned Rate = `DIVIDE(COUNT('Call Center'[Call Id]) - [Number of Answer], COUNT('Call Center'[Call Id]))`
-  - Number of resolved = `Calculate(distinctcount('Call Center'[Call Id]),Filter('Call Center','Call Center'[Resolved]="Y"))`
-  - Average satisfaction rating = `Average('Call Center'[Satisfaction rating])`
-  - Average Speed of answer = `Average('Call Center'[Average Speed of answer in seconds])`
-  - Operation hour DAX = `FORMAT('Call Center'[Time], "hh:mm")`
-  - duration = `MINUTE('Call Center'[AvgTalkDuration])*60 + SECOND('Call Center'[AvgTalkDuration])`
+- **Calculated measures**
+    - Rate of customer = `IF(ISFILTERED('Churn dataset'[Churn]),DIVIDE(CALCULATE(COUNT('Churn dataset'[Churn]), 'Churn dataset'[Churn] = SELECTEDVALUE('Churn dataset'[Churn])),CALCULATE(COUNT('Churn dataset'[customerID]),ALL('Churn dataset'[Churn])),0),DIVIDE(COUNT('Churn dataset'[customerID]),CALCULATE(COUNT('Churn dataset'[customerID]),ALL('Churn dataset'))))`
+    - %churn = `DIVIDE(CALCULATE(COUNT('Churn dataset'[Churn]), 'Churn dataset'[Churn] = "Yes"),CALCULATE(COUNT('Churn dataset'[Churn]), ALL('Churn dataset'[Churn])))`
+    - %male = `DIVIDE(CALCULATE(COUNTA('Churn dataset'[gender]),'Churn dataset'[gender] = "Male"),COUNTA('Churn dataset'[gender]))`
+    - %female = `DIVIDE(CALCULATE(COUNTA('Churn dataset'[gender]),'Churn dataset'[gender] = "Female"),COUNTA('Churn dataset'[gender]))`
+    - subcription = `SWITCH(TRUE(),'Churn unpivot'[tenure]<=12,"< 1 year",'Churn unpivot'[tenure]<=24,"< 2 years",'Churn unpivot'[tenure]<=36,"< 3 years",'Churn unpivot'[tenure]<=48,"< 4 years", 'Churn unpivot'[tenure]<=60,"< 5 years",'Churn unpivot'[tenure]<=72,"< 6 years")`
+    - #use admin ticket = `CALCULATE(COUNTA('Churn dataset'[numAdminTickets]),'Churn dataset'[numAdminTickets] > 0)`
+    - #use tech ticket = `CALCULATE(COUNTA('Churn dataset'[numTechTickets]),'Churn dataset'[numTechTickets] > 0)`
+- **Format measures**
+    - customer text = `SWITCH(
+        TRUE(),
+        SELECTEDVALUE('Churn dataset'[Churn]) = "Yes", "Total Churn Customers",
+        SELECTEDVALUE('Churn dataset'[Churn]) = "No", "Total Retained Customers",
+         "Total Customers")`
+    - dashboard name =`SWITCH(
+        TRUE(),
+        SELECTEDVALUE('Churn dataset'[Churn]) = "Yes","Churn Dashboard",
+        SELECTEDVALUE('Churn dataset'[Churn]) = "No", "Retention Dashboard",
+         "Dashboard")`
+    - rate text =`SWITCH(
+        TRUE(),
+        SELECTEDVALUE('Churn dataset'[Churn]) = "Yes","Churn Rate",
+        SELECTEDVALUE('Churn dataset'[Churn]) = "No", "Retention Rate",
+         "Total Rate")`
+    - Welcome text = `VAR Hour = HOUR(NOW())
+    VAR Greeting = 
+    SWITCH(
+        TRUE(),
+        Hour >= 0 && Hour < 5, "Good Night",
+        Hour >= 5 && Hour < 12, "Good Morning",
+        Hour >= 12 && Hour < 18, "Good Afternoon",
+        Hour >= 18 && Hour < 24, "Good Evening"
+    )
+    RETURN
+    Greeting & " " & "Manager!"`
 
 # Analysis and Insights
 The purpose of this dashboard is to serve as self-exploratory for managers, but I still note some highlighted points that I recognize below:
