@@ -1,4 +1,4 @@
-# Diversity & Inclusion | PWC Virtual Case Experience
+<H1> </a><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/600px-New_Power_BI_Logo.svg.png?20210102182532" alt="Microsoft Power BI" width="30" height="30"> Diversity & Inclusion | PWC Virtual Case Experience
 
 ## Table of contents
 - [Problem Statement](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#problem-statement)
@@ -19,7 +19,7 @@
    
 # Data Sourcing
 
-The dataset used for this analysis was provided by Pwc Switzerland and is available here: [Diversity & Inclusion](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/03%20Diversity-Inclusion-Dataset.xlsx)
+The dataset used for this analysis was provided by Pwc Switzerland and is available here: :link: [Diversity & Inclusion](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/03%20Diversity-Inclusion-Dataset.xlsx)
 
 # Data Preparation
 
