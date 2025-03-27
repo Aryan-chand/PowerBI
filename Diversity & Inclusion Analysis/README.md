@@ -1,18 +1,12 @@
-<!-- https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/03%20Diversity-Inclusion-Dataset.xlsx -->
-
 # Diversity & Inclusion | PWC Virtual Case Experience
 
-![Cover](https://github.com/calmk/Diversity-and-Inclusion-PWC-Virtual-Case-Experience/assets/100661121/28f2beff-1a39-43a9-afe4-a729035b70ad)
-
-
 ## Table of contents
-- [Problem Statement](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Problem-Statement)
-- [Data Sourcing](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Data-Sourcing)
-- [Data Preparation](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Data-Preparation)
-- [Data Modeling](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Data-Modeling)
-- [Data Visualization](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Data-Visualization)
-- [Analysis and Insights](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Analysis-and-Insights)
-- [Shareable Link](https://github.com/calmk/PWC-Virtual-Case-Experience/tree/main/Task%204:%20Diversity%20&%20Inclusion#Shareable-Link)
+- [Problem Statement]()
+- [Data Sourcing]()
+- [Data Preparation]()
+- [Data Visualization]()
+- [Analysis and Insights]()
+- [Shareable Link]()
 
 # Problem Statement
 
@@ -25,11 +19,11 @@
    
 # Data Sourcing
 
-The dataset used for this analysis was provided by [Pwc Switzerland](https://www.pwc.ch/en/careers-with-pwc/students/virtual-case-experience.html) and available here: [Diversity & Inclusion](https://github.com/calmk/PWC-Virtual-Case-Experience/blob/main/Task%204%3A%20Diversity%20%26%20Inclusion/03%20Diversity-Inclusion-Dataset.xlsx)
+The dataset used for this analysis was provided by Pwc Switzerland and is available here: [Diversity & Inclusion](https://cdn.theforage.com/vinternships/companyassets/4sLyCPgmsy8DA6Dh3/03%20Diversity-Inclusion-Dataset.xlsx)
 
 # Data Preparation
 
-The dataset was loaded into Microsoft Power BI Desktop for modeling after transformation in Power Query.
+The dataset was loaded into Microsoft Power BI Desktop for transformation in Power Query.
 
 ### **Metadata**
 
@@ -88,38 +82,14 @@ Data Cleaning for the dataset was done in Power Query as follows:
 ### Data Transformation
 
 - For easy observing and analyzing, the extracted text had been applied for those columns: `Job Level after FY21 promotions`, `Job Level after FY20 promotions`
-    - Extracted Text After Delimiter = `Table.TransformColumns(#"Extracted Text After Delimiter1", {{"Job Level before FY20 promotions", each Text.AfterDelimiter(_, "-"), type text}})`
-
-# Data Modeling
-
-After the dataset was cleaned and transformed, it was ready to be modeled. Because the dataset is just included one table, the Data Modeling is nothing much to modify
-- `Measure` was created to store all DAX measures for ensuring the organization
-
-
-![data modeling](https://github.com/calmk/Diversity-and-Inclusion-PWC-Virtual-Case-Experience/assets/100661121/6fc48c03-f76c-4e32-9cc6-7f7768bbdae1)
-
-
+- Extracted Text After Delimiter = `Table.TransformColumns(#"Extracted Text After Delimiter1", {{"Job Level before FY20 promotions", each Text.AfterDelimiter(_, "-"), type text}})`
 
 # Data Visualization
 
-Data visualization for the dataset was done in Microsoft Power BI Desktop, the dashboard includes three main dashboards and three tooltip pages:
-
-- HR Overview
-- Performance
-- Hiring & Promotion
-
-![detail](https://github.com/calmk/Diversity-and-Inclusion-PWC-Virtual-Case-Experience/assets/100661121/7d865f96-024a-4e87-8d06-e4b7dabe76b6)
+Data visualization for the dataset was done in Microsoft Power BI Desktop, the dashboard includes 5 main KPIs:
 
 
-
-
-### Dashboard Type
-
-Dashboard by the level of detail: **Operational dashboard**
-
-Dashboard by use-case: **Exploratory**
-
-Target audience: **Human Resource Manager, Analyst**
+![detail]()
 
 ### Key Performance Indicators and Metrics:
 
@@ -185,12 +155,6 @@ Target audience: **Human Resource Manager, Analyst**
                 change > 0, "▲" & " " & FORMAT(change,"percent")))`
         
 
-### Format using
-
-**Font:** SF Pro Display
-
-**Color:** Datacamp palette
-
 # Analysis and Insights
 
 The purpose of this dashboard is to serve as self-exploratory for managers, but I still note some highlighted points that I recognize that some root causes of their slow progress in improving gender balance at the executive management level might be below:
@@ -205,7 +169,4 @@ The purpose of this dashboard is to serve as self-exploratory for managers, but 
 
 You can interact and have fun with the dashboard here:
 
-[Microsoft PowerBI](https://app.powerbi.com/view?r=eyJrIjoiM2Y2YzE3ZGQtZTliNi00NzVhLTkxNTktMDQ2YTAzNTY3OWMwIiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9&embedImagePlaceholder=true) | [novyPro](https://www.novypro.com/project/diversity--inclusion-|-pwc-virtual-case-experience)
-
-
-### Huge thanks to you for joining this creation journey with me.  Hope you all are doing great! :pray::pray::pray::relaxed:
+[Microsoft PowerBI]() 
