@@ -9,16 +9,16 @@ This repository displays the process and outcomes of the tasks completed by me d
 ## :pushpin: Projects
 
 These are the screenshot of the dashboard for projects I have created to learn more click on the link of project :                    
-- [**Project 1**](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis): Create Call Centre Dashboard - visualizing customer and agent behavior.<br>
+🔴 [**Project 1**](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis): Create Call Centre Dashboard - visualizing customer and agent behavior.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
   
-- [**Project 2**](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.<br>
+🔴 [**Project 2**](https://github.com/Aryan-chand/PowerBI/tree/main/Customer%20Retension%20Analysis): Create Customer Retention and predict churn customers - visualizing customer demographics and insights.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
   
-- [**Project 3**](https://github.com/Aryan-chand/PowerBI/tree/main/Diversity%20%26%20Inclusion%20Analysis): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.<br>
+🔴 [**Project 3**](https://github.com/Aryan-chand/PowerBI/tree/main/Diversity%20%26%20Inclusion%20Analysis): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Diversity%26Inclusion_pg1.png)
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Diversity%26Inclusion_pg2.png)
