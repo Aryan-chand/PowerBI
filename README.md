@@ -18,7 +18,10 @@ These are the screenshot of the dashboard for projects I have created to learn m
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
   
-- [**Project 3**](): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.
+- [**Project 3**](): Create Diversity and Inclusion in HR - visualizing gender balance in the executive suite.<br>
+
+  ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg1.png)
+  ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/customer%20retention_pg2.png)
 <br>
 
 ## :gear: Technical Stack
