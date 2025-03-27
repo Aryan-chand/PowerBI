@@ -1,12 +1,12 @@
 # Diversity & Inclusion | PWC Virtual Case Experience
 
 ## Table of contents
-- [Problem Statement]()
-- [Data Sourcing]()
-- [Data Preparation]()
-- [Data Visualization]()
-- [Analysis and Insights]()
-- [Shareable Link]()
+- [Problem Statement](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#problem-statement)
+- [Data Sourcing](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#data-sourcing)
+- [Data Preparation](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#data-preparation)
+- [Data Visualization](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#data-visualization)
+- [Analysis and Insights](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#analysis-and-insight)
+- [Shareable Link](https://github.com/Aryan-chand/PowerBI/blob/main/Diversity%20&%20Inclusion%20Analysis/README.md#shareable-link)
 
 # Problem Statement
 
