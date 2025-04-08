@@ -8,7 +8,7 @@ This is a repository which displays the process and outcomes of the tasks comple
 
 ## :pushpin: Projects
 
-These are the screenshot of the dashboard for projects I have created to learn more click on the link of project :                    
+These are the screenshot of the dashboard for projects I have created to learn more click on the link of project :      <br>              
 🔴 [**Project 1**](https://github.com/Aryan-chand/PowerBI/tree/main/Call%20Center%20Analysis): Create Call Centre Dashboard - visualizing customer and agent behavior.<br>
 
   ![dashboard github](https://github.com/Aryan-chand/PowerBI/blob/main/Assets/Call%20Center.png)
