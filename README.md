@@ -3,7 +3,7 @@ Power BI is a business analytics tool by Microsoft for visualizing and analyzing
 <br>
 
 ## :clipboard: Introduction
-This repository displays the process and outcomes of the tasks completed by me during my learning ecperience of PowerBI. All of these .pbix files and insights were my work toward learning.
+This is a repository which displays the process and outcomes of the tasks completed by me during my learning ecperience of PowerBI. All of these .pbix files and insights were my work toward learning.
 <br>
 
 ## :pushpin: Projects
